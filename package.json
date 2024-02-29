@@ -1,0 +1,14 @@
+{
+  "name": "img-filler",
+  "version": "1.0.1",
+  "type": "module",
+  "description": "Generate image and image placeholder. Enter any category/prompt/tag to generate an image url which can then be used in a component",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "npm run test"
+  },
+  "git repository": " ",
+  "author": "Divyam",
+  "license": "ISC"
+}
