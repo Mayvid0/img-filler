@@ -27,11 +27,18 @@ const imageUrl = imgPlaceholder('nature');
 console.log(imageUrl); // Output: URL for a nature-related image
 ```
 
+OR 
+
+```js
+<ImageComponent tag={"whatever tag or prompt"} />
+```
+
 ## Example
 
 ```js
-import React from 'react';
-import { imgPlaceholder } from 'img-filler';
+import React,{useState} from 'react';
+import { useEffect } from 'react';
+import  {imagePlaceholder}  from 'img-filler';
 
 const ImageComponent = ({ tag }) => {
     const [imageUrl, setImageUrl] = useState(null);
@@ -41,7 +48,7 @@ const ImageComponent = ({ tag }) => {
         const fetchImageUrl = async () => {
             try {
                 // Call imagePlaceholder(tag) 
-                const url = await imgPlaceholder(tag);
+                const url = await imagePlaceholder(tag);
                 // Set the obtained image URL in state
                 setImageUrl(url);
             } catch (error) {
@@ -56,7 +63,7 @@ const ImageComponent = ({ tag }) => {
         <div>
             {/* Conditional rendering based on imageUrl */}
             {imageUrl ? (
-                <img src={imageUrl} alt="Fire" />
+                <img src={imageUrl} alt={tag} />
             ) : (
                 <p>Loading...</p>
             )}
