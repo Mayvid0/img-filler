@@ -41,7 +41,7 @@ const ImageComponent = ({ tag }) => {
         const fetchImageUrl = async () => {
             try {
                 // Call imagePlaceholder(tag) 
-                const url = await imagePlaceholder(tag);
+                const url = await imgPlaceholder(tag);
                 // Set the obtained image URL in state
                 setImageUrl(url);
             } catch (error) {
