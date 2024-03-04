@@ -12,7 +12,7 @@ const imagePlaceholderPixabay = async (
   width = 100
 ) => {
   try {
-    const pixabayApiKey = "42634845-0a63eaaafa679340da05531a3";
+    const pixabayApiKey = Pix_Api_Key ;
     const response = await fetch(
       `https://pixabay.com/api/?key=${pixabayApiKey}&q=${tag}&image_type=photo&orientation=horizontal`
     );
@@ -54,7 +54,7 @@ export const imagePlaceholder = async (
     height = tag.toString();
     tag = "nature";
   }
-  const unsplashApiKey = "n1iCdjGdOeKYEos7ARWasBwArKIwoDBJH7l4WhPfJTM";
+  const unsplashApiKey = Unsplash_Api_Key ;
   try {
     const unsplashResponse = await fetch(
       `https://api.unsplash.com/photos/random?query=${tag}&client_id=${unsplashApiKey}&w=${width}&h=${height}`
